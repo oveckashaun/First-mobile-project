@@ -18,14 +18,47 @@ export class HomePage {
 
   }
 
-  public getWeatherData(userInputTown:string): void{
+  public getWeatherOneDay(userInputTown:string): void{
     this.userInputTown = userInputTown;
     console.log(this.userInputTown);
 
-    this.weatherProvider.getTransaction(userInputTown).subscribe(
+    this.weatherProvider.getOneDayTransaction(userInputTown).subscribe(
       (response) => {
-        console.log(response);
+        // console.log(response);
         // this.result = response;
+        this.navCtrl.push(OneDayPage, {
+          data: response
+        })
+      }
+    )
+  }
+
+  public getWeatherForecast(userInputTown:string): void{
+    this.userInputTown = userInputTown;
+    console.log(this.userInputTown);
+
+    this.weatherProvider.getForecastTransaction(userInputTown).subscribe(
+      (response) => {
+        // console.log(response);
+        // this.result = response;
+        this.navCtrl.push(ForecastPage, {
+          data: response
+        })
+      }
+    )
+  }
+
+  public getWeatherDaylyForecast(userInputTown:string): void{
+    this.userInputTown = userInputTown;
+    console.log(this.userInputTown);
+
+    this.weatherProvider.getDaylyForecastTransaction(userInputTown).subscribe(
+      (response) => {
+        // console.log(response);
+        // this.result = response;
+        this.navCtrl.push(DaylyForecastPage, {
+          data: response
+        })
       }
     )
   }
