@@ -9,10 +9,14 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { OneDayPage } from '../pages/one-day/one-day';
+import { ForecastPage } from '../pages/forecast/forecast';
+import { DaylyForecastPage } from '../pages/dayly-forecast/dayly-forecast'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherProvider } from '../providers/weather/weather';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { WeatherProvider } from '../providers/weather/weather';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    OneDayPage,
+    ForecastPage,
+    DaylyForecastPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,10 @@ import { WeatherProvider } from '../providers/weather/weather';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    OneDayPage,
+    ForecastPage,
+    DaylyForecastPage
   ],
   providers: [
     StatusBar,
