@@ -15,4 +15,30 @@
 
 <ion-content padding>
 
+  <ion-card>
+    <ion-card-header>
+      Weather result
+    </ion-card-header>
+    <ion-card-content>
+      <!-- here goes trans. result -->
+      Town: {{ result }}
+      <!-- {{ iconWeather }} -->
+    </ion-card-content>
+    <ion-card-content>
+      Temp: {{ temp }}
+    </ion-card-content>
+    <ion-card-content>
+      Type: {{weatherMain}}
+    </ion-card-content>
+    <ion-card-content>
+        Pressure: {{ pressure }}
+    </ion-card-content>
+    <ion-card-content>
+        Wind speed: {{ windSpees }}m/s
+    </ion-card-content>
+    <ion-card-content>
+      <!-- <ion-img name={{"http://openweathermap.org/img/w/" + iconWeather + ".png"}} item-start></ion-icon> -->
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

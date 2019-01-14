@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>DaylyForecast</ion-title>
+    <ion-title>Sunset/sunrise</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-card>
+      <ion-card-content>
+          Sunrise: {{sunrise * 1000 | date:'yyyy-MM-dd    HH:mm:ss'}}
+      </ion-card-content>
+      <ion-card-content>
+          Sunset: {{sunset * 1000 | date:'yyyy-MM-dd    HH:mm:ss'}}
+      </ion-card-content>
+    </ion-card>
 </ion-content>

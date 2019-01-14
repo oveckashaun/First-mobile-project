@@ -16,7 +16,7 @@ import { DaylyForecastPage } from '../pages/dayly-forecast/dayly-forecast'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherProvider } from '../providers/weather/weather';
-
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { WeatherProvider } from '../providers/weather/weather';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

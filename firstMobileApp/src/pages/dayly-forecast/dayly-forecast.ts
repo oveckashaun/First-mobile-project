@@ -14,9 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'dayly-forecast.html',
 })
 export class DaylyForecastPage {
+  public sunset:string;
+  public sunrise:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log(navParams.get('data'));
+    this.sunset = navParams.get('data').sys.sunset;
+    this.sunrise = navParams.get('data').sys.sunrise;
   }
 
   ionViewDidLoad() {

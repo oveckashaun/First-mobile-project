@@ -5,18 +5,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-input #input type="text" placeholder="Town for weather..."></ion-input>
+  <ion-input #input type="text" placeholder="Town for weather..." required></ion-input>
   
   <button (click)="getWeatherOneDay(input.value)" ion-button full>Get one day weather</button>
   <button (click)="getWeatherForecast(input.value)" ion-button full>Get forecast</button>
   <button (click)="getWeatherDaylyForecast(input.value)" ion-button full>Get sunrise/sunset</button>
-  <ion-card>
-    <ion-card-header>
-      Weather result
-    </ion-card-header>
-    <ion-card-content>
-      <!-- here goes trans. result -->
-      {{ result }}
-    </ion-card-content>
-  </ion-card>
 </ion-content>

@@ -4,6 +4,7 @@ import { WeatherProvider } from '../../providers/weather/weather';
 import { OneDayPage } from '../one-day/one-day';
 import { ForecastPage } from '../forecast/forecast';
 import { DaylyForecastPage } from '../dayly-forecast/dayly-forecast';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -12,9 +13,8 @@ import { DaylyForecastPage } from '../dayly-forecast/dayly-forecast';
 export class HomePage {
 
   private userInputTown:string;
-  public result:string;
 
-  constructor(public navCtrl: NavController, private weatherProvider: WeatherProvider) {
+  constructor(public navCtrl: NavController, private weatherProvider: WeatherProvider, private storage: Storage) {
 
   }
 
