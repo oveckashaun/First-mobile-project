@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { VariableAst } from '@angular/compiler';
-import { getLocaleDateFormat } from '@angular/common';
+// import { VariableAst } from '@angular/compiler';
+// import { getLocaleDateFormat } from '@angular/common';
 
 /**
  * Generated class for the ForecastPage page.
@@ -16,19 +16,23 @@ import { getLocaleDateFormat } from '@angular/common';
   templateUrl: 'forecast.html',
 })
 export class ForecastPage {
+  public wind:Array<number> = new Array();
+  public date_of_day:Array<string> = new Array();
+  public temp_min:Array<number> = new Array();
+  public temp_max:Array<number> = new Array();
+  public pressure:Array<number> = new Array();
+  public weather_main:Array<number> = new Array();
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(navParams.get('data'));
-    console.log(navParams.get('data').list.length);
-    
-    var lengthVal = navParams.get('data').list.length;
     var arrayVal = navParams.get('data').list;
-    var i;
-    var d = new Date();
-    console.log(d.getDate());
     
-    for(i = 0; i < lengthVal; i++){
-      // getDate()
+    for(var i = 0; i < 5; i++){
+      this.date_of_day[i] = arrayVal[i].dt_txt;
+      this.wind.push(arrayVal[i].wind.speed);
+      this.temp_min.push(arrayVal[i].main.temp_min);
+      this.temp_max.push(arrayVal[i].main.temp_max);
+      this.pressure.push(arrayVal[i].main.pressure);
+      this.weather_main.push(arrayVal[i].weather[0].main);
     }
   }
 
