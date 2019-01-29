@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-input #input type="text" placeholder="Town for weather..." required></ion-input>
+  <ion-input [(ngModel)]="town" #input type="text" required></ion-input>
   
   <button (click)="getWeatherOneDay(input.value)" ion-button full>Get one day weather</button>
   <button (click)="getWeatherForecast(input.value)" ion-button full>Get forecast</button>
